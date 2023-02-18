@@ -1,7 +1,7 @@
 # Z80-Game-Of-Life
 An implementation of Conway's Game of Life for an RC2014 compatible Z80 SBC 
 
-![life](https://user-images.githubusercontent.com/17494632/219825740-f466c441-564b-4b93-bab6-42945e0accec.gif)
+![life](https://user-images.githubusercontent.com/17494632/219826335-1acd6c2f-2383-4c8b-9581-1e6c3a9c57a8.gif)
 
 ### Compile
 `zmac main.asm`
