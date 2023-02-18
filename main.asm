@@ -174,14 +174,12 @@ printCont:
                 CALL    DispHL
                                             ;Check For Break Char
                 RST		18H
-				JR		Z, printDelay
+				JR		Z, printEnd
                 RST		10H
                 CP      03h
                 JR      Z, end                   
 
-printDelay:
-                LD      BC, 08888h
-                CALL    DELAY
+printEnd:
                 RET
 
 end:
@@ -227,15 +225,6 @@ RandLFSR:
                 POP     DE
                 POP     HL
                 ret
-
-;BUSY LOOP
-DELAY:
-				NOP
-				DEC 	BC
-				LD 		A,B
-				OR 		C
-				RET 	Z
-				JR 		DELAY
 
 ;Number in hl to decimal ASCII
 ;Thanks to z80 Bits
